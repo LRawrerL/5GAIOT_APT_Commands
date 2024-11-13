@@ -6,10 +6,10 @@ AT+QUIMSlOT?  	# -> Check sim slot
 AT+QUIMSLOT=1	# -> Swtich Sim Slot to 1
 
 # Changing network modes
-AT+QWNPREFCFG="mode_pref",NR5G		# -> Force to 5G standalone, meaning no fall back to 4G
-AT+QWNPREFCFG="mode_pref",AUTO		# -> Switches networks based on signal quality and service availability, meaning can fall back to 4G etc
-AT+QWNPREFCFG="nr5g_disable_mode",0	# -> Enable for 5G SA and NSA
-AT+QWNPREFCFG="nr5g_disable_mode",2	# -> Disable 5G NSA Mode
+AT+QNWPREFCFG="mode_pref",NR5G		# -> Force to 5G standalone, meaning no fall back to 4G
+AT+QNWPREFCFG="mode_pref",AUTO		# -> Switches networks based on signal quality and service availability, meaning can fall back to 4G etc
+AT+QNWPREFCFG="nr5g_disable_mode",0	# -> Enable for 5G SA and NSA
+AT+QNWPREFCFG="nr5g_disable_mode",2	# -> Disable 5G NSA Mode
 
 # Checking network status
 AT+QENG="servingcell"
